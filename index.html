@@ -14,15 +14,14 @@
     
     <!-- model-viewer タグを使って3Dモデルを表示 -->
     <model-viewer
-        ar                             
-        ar-modes="scene-viewer webxr quick-look"
-        src="./rousoku.gltf"             
-        ios-src="./rousoku.usdz"        
-        alt="Rousoku"
-        auto-rotate
-        camera-controls
-        poster="rousoku.png"> <!-- HTMLコメントはここで閉じます -->
+        ar                             <!-- ARモードを有効にする -->
+        ar-modes="scene-viewer webxr quick-look"  <!-- Android用とiOS用両対応 -->
+        src="./rousoku.gltf"           <!-- GLTF形式の3Dモデル -->
+        ios-src="./rousoku.usdz"       <!-- iOS用の3Dモデル（USDZ形式） -->
+        alt="Rousoku"                  <!-- モデルの代替テキスト -->
+        auto-rotate                    <!-- モデルが自動で回転する -->
+        camera-controls                <!-- モデルをユーザーが操作できる -->
+        poster="rousoku.png">          <!-- ロード中に表示される画像 -->
     </model-viewer>
-
 </body>
 </html>
