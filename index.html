@@ -12,53 +12,46 @@
     <style>
         /* ページ全体のスタイル */
         body {
-            font-family: Arial, sans-serif;  /* フォントの設定 */
-            background-color: #f4f4f4;      /* 背景色の設定 */
-            margin: 0;                       /* ページの余白をなくす */
-            padding: 0;                      /* ページの余白をなくす */
-            display: flex;                   /* フレックスボックスで配置 */
-            justify-content: center;         /* 横方向で中央寄せ */
-            align-items: center;             /* 縦方向で中央寄せ */
-            height: 100vh;                   /* ページ全体の高さを画面いっぱいに設定 */
-            text-align: center;              /* テキストを中央揃え */
+            font-family: Arial, sans-serif;  
+            background-color: #f4f4f4;      
+            margin: 0;                       
+            padding: 0;                      
+            display: flex;                   
+            justify-content: center;         
+            align-items: center;             
+            height: 100vh;                   
+            text-align: center;              
         }
 
         /* ヘッダーのスタイル */
         h1 {
-            font-size: 2rem;                  /* フォントサイズ */
-            margin-bottom: 20px;               /* 下に余白を設定 */
+            font-size: 2rem;                  
+            margin-bottom: 20px;               
         }
 
         /* model-viewerのスタイル */
         model-viewer {
-            width: 80%;                        /* モデルの幅を80%に設定 */
-            height: 500px;                     /* モデルの高さを500pxに設定 */
-            background: #e0e0e0;               /* モデル表示領域の背景色 */
-            border-radius: 10px;               /* 角を丸くする */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* シャドウ効果 */
-        }
-
-        /* ロード画面（poster画像が表示される状態） */
-        model-viewer[poster] {
-            background: #f0f0f0 url('rousoku.png') center center no-repeat;
-            background-size: contain;         /* 画像のサイズを調整 */
+            width: 80%;                        
+            height: 500px;                     
+            background: #e0e0e0;               
+            border-radius: 10px;               
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
         }
     </style>
 </head>
 <body>
-    <!-- タイトル -->
     <h1>AR 3D モデル：Rousoku</h1>
-    
+
     <!-- model-viewer タグを使って3Dモデルを表示 -->
     <model-viewer
-        ar                             <!-- ARモードを有効にする -->
-        ar-modes="scene-viewer webxr quick-look"  <!-- Android用とiOS用両対応 -->
-        src="./rousoku.gltf"           <!-- GLTF形式の3Dモデル -->
-        ios-src="./rousoku.usdz"       <!-- iOS用の3Dモデル（USDZ形式） -->
-        alt="Rousoku"                  <!-- モデルの代替テキスト -->
-        auto-rotate                    <!-- モデルが自動で回転する -->
-        camera-controls                <!-- モデルをユーザーが操作できる -->
-        poster="rousoku.png">          <!-- ロード中に表示される画像 -->
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        src="./rousoku.gltf"         
+        ios-src="./rousoku.usdz"       
+        alt="Rousoku"                  
+        auto-rotate                    
+        camera-controls                
+        poster="rousoku.png">         
     </model-viewer>
 </body>
 </html>
