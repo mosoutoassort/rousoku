@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ろうそくの3Dモデル</title>
+    <title>AR 3D モデル</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- model-viewer を読み込む -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>ろうそくの3Dモデル</h1>
-        <!-- model-viewer タグを使って3Dモデルを表示 -->
-        <figure class="img">
-            <model-viewer 
-                src="rousoku.gltf"           <!-- GLTF形式の3Dモデル -->
-                ios-src="rousoku.usdz"       <!-- iOS用の3Dモデル（USDZ形式） -->
-                poster="rousoku.png"         <!-- ロード中のポスター画像 -->
-                auto-rotate                   <!-- モデルが自動で回転する -->
-                camera-controls               <!-- モデルをユーザーが操作できる -->
-                ar                             <!-- AR表示を有効にする -->
-                alt="ろうそくの3Dモデル">
-            </model-viewer>
-        </figure>
-        <p>ろうそくの3DモデルをARで体験しよう！</p>
-    </div>
+    <h1>AR 3D モデル：Rousoku</h1>
+    <!-- model-viewer タグを使って3Dモデルを表示 -->
+    <model-viewer
+        ar                              <!-- ARモードを有効にする -->
+        ar-modes="scene-viewer webxr quick-look"   <!-- ARモードを指定 -->
+        src="./rousoku.glb"             <!-- GLTF形式の3Dモデル -->
+        ios-src="./rousoku.usdz"        <!-- iOS用の3Dモデル（USDZ形式） -->
+        alt="Rousoku"                   <!-- モデルの代替テキスト -->
+        auto-rotate                      <!-- モデルが自動で回転する -->
+        camera-controls                  <!-- モデルをユーザーが操作できる -->
+        poster="rousoku.png"             <!-- モデルが読み込まれる前に表示される画像（オプション） -->
+    ></model-viewer>
+    <br>
 </body>
 </html>
