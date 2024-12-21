@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>AR 3D モデル</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR 3D モデル</title>
     
     <!-- model-viewer を読み込む -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="layout.css" />
 </head>
 <body>
+    <!-- タイトル -->
     <h1>AR 3D モデル：Rousoku</h1>
     
     <!-- model-viewer タグを使って3Dモデルを表示 -->
@@ -25,6 +26,8 @@
         camera-controls                  <!-- モデルをユーザーが操作できる -->
         poster="rousoku.png"             <!-- モデルが読み込まれる前に表示される画像（オプション） -->
     ></model-viewer>
+    
+    <!-- 余白 -->
     <br>
 </body>
 </html>
