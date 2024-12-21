@@ -7,9 +7,6 @@
     
     <!-- model-viewer を読み込む -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
-    <!-- layout.css を読み込む -->
-    <link rel="stylesheet" href="layout.css" />
 </head>
 <body>
     <!-- タイトル -->
@@ -17,17 +14,15 @@
     
     <!-- model-viewer タグを使って3Dモデルを表示 -->
     <model-viewer
-        ar                              <!-- ARモードを有効にする -->
-        ar-modes="scene-viewer webxr quick-look"   <!-- ARモードを指定 -->
-        src="./rousoku.glb"             <!-- GLTF形式の3Dモデル -->
-        ios-src="./rousoku.usdz"        <!-- iOS用の3Dモデル（USDZ形式） -->
-        alt="Rousoku"                   <!-- モデルの代替テキスト -->
-        auto-rotate                      <!-- モデルが自動で回転する -->
-        camera-controls                  <!-- モデルをユーザーが操作できる -->
-        poster="rousoku.png"             <!-- モデルが読み込まれる前に表示される画像（オプション） -->
-    ></model-viewer>
-    
-    <!-- 余白 -->
-    <br>
+        ar                             
+        ar-modes="scene-viewer webxr quick-look"
+        src="./rousoku.glb"             
+        ios-src="./rousoku.usdz"        
+        alt="Rousoku"
+        auto-rotate
+        camera-controls
+        poster="rousoku.png"> <!-- HTMLコメントはここで閉じます -->
+    </model-viewer>
+
 </body>
 </html>
