@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>AR 3D モデル</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- model-viewer を読み込む -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Dモデル表示</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
-    <!-- layout.css を読み込む -->
-    <link rel="stylesheet" href="layout.css" />
 </head>
 <body>
-    <h1>AR 3D モデル：Rousoku</h1>
+    <h1>3Dモデル: rousoku</h1>
     
-    <!-- model-viewer タグを使って3Dモデルを表示 -->
     <model-viewer
-        ar                              <!-- ARモードを有効にする -->
-        ar-modes="scene-viewer webxr quick-look"   <!-- ARモードを指定 -->
-        src="./rousoku.glb"             <!-- GLTF形式の3Dモデル -->
-        ios-src="./rousoku.usdz"        <!-- iOS用の3Dモデル（USDZ形式） -->
-        alt="Rousoku"                   <!-- モデルの代替テキスト -->
-        auto-rotate                      <!-- モデルが自動で回転する -->
-        camera-controls                  <!-- モデルをユーザーが操作できる -->
-        poster="rousoku.png"             <!-- モデルが読み込まれる前に表示される画像（オプション） -->
+        src="path/to/rousoku.glb"  <!-- ここに3Dモデルのパスを指定 -->
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        style="width: 100%; height: 100%;"
     ></model-viewer>
-    <br>
+
 </body>
 </html>
