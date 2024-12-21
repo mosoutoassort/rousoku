@@ -1,30 +1,32 @@
-/* layout.css */
-
-/* 全体の余白とフォント設定 */
+/* ページ全体の基本設定 */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* 背景色 */
+    text-align: center; /* 中央寄せ */
 }
 
-/* ヘッダーのスタイル */
+/* タイトルのデザイン */
 h1 {
-    font-size: 2rem;
+    margin: 20px 0;
+    font-size: 1.8rem;
     color: #333;
-    margin-top: 20px;
 }
 
-/* model-viewer を中央に配置 */
+/* model-viewer タグのデザイン */
 model-viewer {
-    width: 100%;
-    height: 500px; /* 高さを指定 */
-    max-width: 600px; /* 最大幅 */
-    margin: 0 auto; /* 中央寄せ */
+    margin: 0 auto; /* 中央揃え */
+    max-width: 90%;
+    height: 400px; /* 表示する3Dモデルの高さ */
+    border: 1px solid #ccc; /* モデル領域の枠線 */
+    border-radius: 8px; /* 角丸の枠線 */
+    background: #fff; /* 背景色 */
 }
 
-/* モデル読み込み中に表示されるポスター画像のスタイル */
-model-viewer[poster] {
-    background: #e0e0e0;
+/* 全体の余白調整 */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
 }
